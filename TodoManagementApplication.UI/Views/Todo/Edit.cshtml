@@ -1,0 +1,68 @@
+﻿@using TodoManagementApplication.Domain.ViewModels
+@model TodoDto
+
+@{
+    ViewData["Title"] = "Edit Todo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var allStatus = ViewBag.AllStatus;
+    var allPriority = ViewBag.AllPriority;
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>@ViewData["Title"]</h2>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">← Back to List</a>
+    </div>
+    <div>@(ViewBag.MessageError)</div>
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control" placeholder="Enter title" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Priority" class="form-label"></label>
+                    <select asp-for="Priority" class="form-select" asp-items="@allPriority">
+                        <option value="">-- Select Priority --</option>
+                    </select>
+                    <span asp-validation-for="Priority" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DueDate" class="form-label"></label>
+                    <input asp-for="DueDate" class="form-control" placeholder="Enter DueDate" />
+                    <span asp-validation-for="DueDate" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LastModifiedDate" class="form-label"></label>
+                    <input asp-for="LastModifiedDate" disabled="disabled" class="form-control" />
+                </div>
+
+                <div class="mt-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
