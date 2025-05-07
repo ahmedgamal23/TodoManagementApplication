@@ -38,6 +38,17 @@ This project was developed for a company-assigned task to demonstrate:
 - **UI Enhancement:** AJAX-based updates for better UX
 
 ---
+## Samples:
+![Screenshot (615)](https://github.com/user-attachments/assets/85eb76bd-e6ad-424e-adb0-a7695903e363)
+![Screenshot (616)](https://github.com/user-attachments/assets/d64b5f6f-835d-450f-91b8-4c5c2c7d88c9)
+![Screenshot (617)](https://github.com/user-attachments/assets/4af9aacf-492a-4d52-8fb0-eaac6f4d86f0)
+![Screenshot (618)](https://github.com/user-attachments/assets/a478ee5b-20fe-469d-b0a4-dafecadeb6ff)
+![Screenshot (619)](https://github.com/user-attachments/assets/a18fdffc-918f-461b-8893-c52c95c58d56)
+![Screenshot (620)](https://github.com/user-attachments/assets/3aff7fe9-8dfd-4d23-9c9d-e8defbd5f818)
+![Screenshot (621)](https://github.com/user-attachments/assets/ab0542cc-e710-4ccb-aaac-c12b8dcb0919)
+![Screenshot (622)](https://github.com/user-attachments/assets/a22ad980-0f3c-4e32-a1e2-3b0c0e46355d)
+
+---
 
 ## 🚀 Getting Started
 
